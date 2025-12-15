@@ -403,8 +403,14 @@ class _MainScaffoldState extends State<MainScaffold> {
           const SizedBox(height: 20),
           Center(
             child: ElevatedButton(
-              onPressed: () => _showFeatureNotAvailable("View All Products"), 
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AllProductsScreen()),
+                );
+              },
               style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFCE93D8), foregroundColor: Colors.white),
+              
               child: const Text("View All Products"),
             ),
           )
